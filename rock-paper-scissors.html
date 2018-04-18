@@ -1,0 +1,37 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>Week 3 Day 2 - Loops</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var game = ["p", "s", "r"];
+        do {
+            var p1 = prompt("what do you pick");
+            var guess = game[Math.floor(Math.random() * game.length)];
+            console.log(guess);
+            alert(guess);
+            if (guess === "r" && p1 === "s") {
+                alert('You lose');
+            }
+            else if (guess === "p" && p1 === "r") {
+                alert('You lose');
+            }
+            else if (guess === 's' && p1 === 'p') {
+                alert('You lose');
+            }
+            else if (guess === p1) {
+                alert("tie");
+            }
+            else {
+                alert("you win");
+            }
+        }
+        while (!p1 || p1 === guess);
+
+    </script>
+</body>
+
+</html>
